@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LamdaTech — Website & Digital Product Solutions</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-600:#2563eb; --blue-700:#1d4ed8; --ink:#0f1b33; --muted:#5b6b85;
+    --bg-tint:#f4f7fd; --card-border:#e6ebf4;
+  }
+  html{scroll-behavior:smooth; scroll-padding-top: env(safe-area-inset-top,0px);}
+  body{font-family:'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; color:var(--ink); background:#fff;
+    padding-top: env(safe-area-inset-top,0px); padding-bottom: env(safe-area-inset-bottom,0px);}
+  .muted{color:var(--muted)}
+  .blue{color:var(--blue-600)}
+  .btn-primary{background:var(--blue-600); color:#fff; transition:background .15s ease;}
+  .btn-primary:hover{background:var(--blue-700)}
+  .btn-outline{border:1px solid #d7deea; color:var(--ink); transition:border-color .15s ease, background .15s ease;}
+  .btn-outline:hover{border-color:var(--blue-600); background:#f7f9ff}
+  .card{border:1px solid var(--card-border); border-radius:16px; background:#fff;}
+  .icon-tile{width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center;}
+  .device-shadow{filter:drop-shadow(0 30px 40px rgba(37,99,235,.14));}
+  @media (prefers-reduced-motion: no-preference){
+    .hero-float{animation:float 5s ease-in-out infinite;}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  }
+  .nav-link{position:relative; color:#334; font-weight:500;}
+  .nav-link.active{color:var(--blue-600); font-weight:600;}
+  .nav-link.active::after{content:"";position:absolute;left:0;right:0;bottom:-20px;height:2px;background:var(--blue-600);}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Header -->
+<header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 h-20 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 font-extrabold text-lg">
+      <span class="icon-tile" style="background:var(--blue-600)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 3v18l6-4 6 4V3" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+      </span>
+      LamdaTech
+    </a>
+    <nav class="hidden md:flex items-center gap-9 text-sm">
+      <a href="#top" class="nav-link active">Home</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#work" class="nav-link">Portfolio</a>
+      <a href="#why" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <a href="https://wa.me/6282395921952" target="_blank" rel="noopener" class="btn-primary hidden sm:inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-sm font-semibold">
+      Get a Quote
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="top" class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-16 pb-20 grid lg:grid-cols-2 gap-14 items-center">
+  <div>
+    <span class="inline-block text-xs font-semibold px-3 py-1.5 rounded-full mb-5" style="background:var(--bg-tint); color:var(--blue-600)">Build Your Digital Future</span>
+    <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
+      Website & Digital<br>Product Solutions<br>untuk <span class="blue">Bisnis Anda</span>
+    </h1>
+    <p class="mt-6 muted text-base leading-relaxed max-w-md">
+      LamdaTech membantu Anda membangun website modern, aplikasi mobile (Android & iOS), dan produk digital lainnya dengan teknologi terbaik, desain yang menarik, dan performa yang optimal.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#contact" class="btn-primary rounded-full px-6 py-3 text-sm font-semibold inline-flex items-center gap-2">
+        Mulai Sekarang
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#work" class="btn-outline rounded-full px-6 py-3 text-sm font-semibold">Lihat Portofolio</a>
+    </div>
+
+    <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6">
+      <div>
+        <div class="icon-tile mb-2" style="background:var(--bg-tint)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="#2563eb" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <p class="font-semibold text-sm">Website</p>
+        <p class="text-xs muted mt-1">Company Profile, E-Commerce, Landing Page, & Lainnya</p>
+      </div>
+      <div>
+        <div class="icon-tile mb-2" style="background:var(--bg-tint)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="7" y="2" width="10" height="20" rx="2" stroke="#2563eb" stroke-width="2"/><path d="M11 18h2" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <p class="font-semibold text-sm">Mobile App</p>
+        <p class="text-xs muted mt-1">Android & iOS (Flutter / Native)</p>
+      </div>
+      <div>
+        <div class="icon-tile mb-2" style="background:var(--bg-tint)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="1.5" stroke="#2563eb" stroke-width="2"/><path d="M8 20h8M12 16v4" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <p class="font-semibold text-sm">Desktop App</p>
+        <p class="text-xs muted mt-1">Windows / macOS / Linux</p>
+      </div>
+      <div>
+        <div class="icon-tile mb-2" style="background:var(--bg-tint)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#2563eb" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="#2563eb" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="#2563eb" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="#2563eb" stroke-width="2"/></svg>
+        </div>
+        <p class="font-semibold text-sm">Digital Product</p>
+        <p class="text-xs muted mt-1">SaaS, Tools, Dashboard, & Solusi Kustom</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative hero-float">
+    <div class="absolute inset-0 -z-10 rounded-full" style="background:radial-gradient(circle,#eaf1ff 0%, rgba(255,255,255,0) 70%);"></div>
+    <div class="relative mx-auto max-w-md">
+      <div class="rounded-2xl border-8 border-slate-900 device-shadow bg-white overflow-hidden">
+        <div class="bg-slate-50 px-4 py-3 flex items-center justify-between">
+          <div class="flex items-center gap-1.5">
+            <span class="icon-tile" style="width:20px;height:20px;background:var(--blue-600);border-radius:6px"></span>
+            <span class="text-xs font-bold">LamdaTech</span>
+          </div>
+          <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:var(--bg-tint); color:var(--blue-600)">Menu</span>
+        </div>
+        <div class="p-5">
+          <p class="text-lg font-extrabold leading-snug">Better Solutions<br>for Your Digital World</p>
+          <div class="mt-4 flex gap-2">
+            <span class="btn-primary text-[10px] px-3 py-1.5 rounded-full font-semibold">Get Started</span>
+            <span class="btn-outline text-[10px] px-3 py-1.5 rounded-full font-semibold">Learn More</span>
+          </div>
+          <div class="mt-5 h-24 rounded-lg" style="background:var(--bg-tint)"></div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute -right-2 top-10 w-11 h-11 rounded-2xl bg-white shadow-lg flex items-center justify-center">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M16.5 3c-1.7 0-3 1.3-3.3 2.9C12.9 4.3 11.6 3 9.9 3 7.7 3 6 4.8 6 7c0 4.2 6 9.5 6 9.5S18 11.2 18 7c0-2.2-1.7-4-3.5-4z" stroke="#2563eb" stroke-width="1.6"/></svg>
+    </div>
+    <div class="absolute -right-4 bottom-20 w-11 h-11 rounded-2xl bg-white shadow-lg flex items-center justify-center">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke="#2563eb" stroke-width="1.6"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-20" style="background:var(--bg-tint)">
+  <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+    <div class="grid lg:grid-cols-3 gap-10 items-start mb-12">
+      <div class="lg:col-span-1">
+        <span class="inline-block text-xs font-semibold px-3 py-1.5 rounded-full mb-4 bg-white" style="color:var(--blue-600)">Our Services</span>
+        <h2 class="text-3xl font-extrabold tracking-tight">Layanan Kami</h2>
+        <p class="mt-4 muted text-sm leading-relaxed">Kami menyediakan berbagai layanan pengembangan digital untuk membantu bisnis Anda tumbuh dan berkembang di era digital.</p>
+        <a href="#contact" class="btn-outline bg-white inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-sm font-semibold mt-6">
+          Lihat Semua Layanan
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#0f1b33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="lg:col-span-2 grid sm:grid-cols-2 gap-5">
+        <div class="card p-6">
+          <div class="icon-tile mb-4" style="background:var(--bg-tint)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="#2563eb" stroke-width="2"/></svg>
+          </div>
+          <p class="font-bold">Website Development</p>
+          <p class="text-sm muted mt-2 leading-relaxed">Website profesional, cepat, aman, dan responsif untuk bisnis Anda.</p>
+        </div>
+        <div class="card p-6">
+          <div class="icon-tile mb-4" style="background:var(--bg-tint)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="7" y="2" width="10" height="20" rx="2" stroke="#2563eb" stroke-width="2"/></svg>
+          </div>
+          <p class="font-bold">Mobile App Development</p>
+          <p class="text-sm muted mt-2 leading-relaxed">Aplikasi Android & iOS dengan performa tinggi dan desain modern.</p>
+        </div>
+        <div class="card p-6">
+          <div class="icon-tile mb-4" style="background:var(--bg-tint)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="1.5" stroke="#2563eb" stroke-width="2"/></svg>
+          </div>
+          <p class="font-bold">Desktop App Development</p>
+          <p class="text-sm muted mt-2 leading-relaxed">Aplikasi desktop untuk Windows, macOS, dan Linux sesuai kebutuhan Anda.</p>
+        </div>
+        <div class="card p-6">
+          <div class="icon-tile mb-4" style="background:var(--bg-tint)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="#2563eb" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="#2563eb" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="#2563eb" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="#2563eb" stroke-width="2"/></svg>
+          </div>
+          <p class="font-bold">Digital Product</p>
+          <p class="text-sm muted mt-2 leading-relaxed">SaaS, tools, dashboard, dan produk digital lainnya yang inovatif.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why choose us -->
+<section id="why" class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20 grid lg:grid-cols-3 gap-10">
+  <div>
+    <span class="inline-block text-xs font-semibold px-3 py-1.5 rounded-full mb-4" style="background:var(--bg-tint); color:var(--blue-600)">Why Choose Us</span>
+    <h2 class="text-3xl font-extrabold tracking-tight leading-snug">Kenapa Memilih LamdaTech?</h2>
+    <p class="mt-4 muted text-sm leading-relaxed">Kami bukan hanya sekadar membuat website atau aplikasi, tapi kami berkomitmen untuk memberikan solusi terbaik sesuai kebutuhan bisnis Anda.</p>
+  </div>
+  <div class="lg:col-span-2 grid sm:grid-cols-2 gap-x-10 gap-y-8">
+    <div class="flex gap-4">
+      <div class="icon-tile shrink-0" style="background:var(--bg-tint)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.7 6.6L22 9.2l-5.3 4.6L18.2 21 12 17.3 5.8 21l1.5-7.2L2 9.2l7.3-.6L12 2z" stroke="#2563eb" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <p class="font-bold">Kualitas Terbaik</p>
+        <p class="text-sm muted mt-1 leading-relaxed">Kode bersih, performa optimal, dan desain yang profesional.</p>
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="icon-tile shrink-0" style="background:var(--bg-tint)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="#2563eb" stroke-width="1.6"/><path d="M3 20c0-3 2.7-5 6-5s6 2 6 5M16 8a3 3 0 110-6M21 20c0-2.5-1.8-4.4-4-4.9" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <p class="font-bold">Tim Berpengalaman</p>
+        <p class="text-sm muted mt-1 leading-relaxed">Berpengalaman dalam berbagai proyek dan teknologi modern.</p>
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="icon-tile shrink-0" style="background:var(--bg-tint)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="#2563eb" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </div>
+      <div>
+        <p class="font-bold">Komunikasi Jelas</p>
+        <p class="text-sm muted mt-1 leading-relaxed">Proses kerja yang transparan, update rutin, dan respons cepat.</p>
+      </div>
+    </div>
+    <div class="flex gap-4">
+      <div class="icon-tile shrink-0" style="background:var(--bg-tint)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2563eb" stroke-width="1.6"/><path d="M12 7v5l3 3" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <p class="font-bold">Harga Kompetitif</p>
+        <p class="text-sm muted mt-1 leading-relaxed">Solusi terbaik dengan harga yang masuk akal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recent work -->
+<section id="work" class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pb-20">
+  <div class="mb-10">
+    <span class="inline-block text-xs font-semibold px-3 py-1.5 rounded-full mb-4" style="background:var(--bg-tint); color:var(--blue-600)">Our Work</span>
+    <h2 class="text-3xl font-extrabold tracking-tight">Proyek Terbaru</h2>
+    <p class="mt-3 muted text-sm leading-relaxed max-w-xl">Beberapa proyek yang telah kami kerjakan untuk klien kami. Setiap proyek dibuat dengan perhatian penuh terhadap detail dan kebutuhan pengguna.</p>
+    <a href="#contact" class="btn-outline inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-sm font-semibold mt-6">Lihat Semua Proyek</a>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="card overflow-hidden">
+      <div class="h-40 flex items-center justify-center" style="background:var(--bg-tint)">
+        <svg width="70" height="50" viewBox="0 0 70 50" fill="none"><rect x="2" y="2" width="66" height="40" rx="4" stroke="#2563eb" stroke-width="2"/><rect x="8" y="10" width="30" height="4" rx="2" fill="#2563eb"/><rect x="8" y="18" width="20" height="4" rx="2" fill="#c7d7fb"/></svg>
+      </div>
+      <div class="p-5">
+        <p class="font-bold">PANGI — Sistem Perjalanan Dinas</p>
+        <p class="text-sm muted mt-1 leading-relaxed">Sistem administrasi perjalanan dinas untuk instansi pendidikan: pengajuan, validasi, dan pengarsipan yang terlacak.</p>
+        <span class="inline-block mt-3 text-xs font-semibold px-3 py-1 rounded-full" style="background:var(--bg-tint); color:var(--blue-600)">Web App</span>
+      </div>
+    </div>
+    <div class="card overflow-hidden">
+      <div class="h-40 flex items-center justify-center" style="background:var(--bg-tint)">
+        <svg width="60" height="50" viewBox="0 0 60 50" fill="none"><rect x="18" y="2" width="24" height="46" rx="5" stroke="#2563eb" stroke-width="2"/><rect x="24" y="10" width="12" height="4" rx="2" fill="#2563eb"/></svg>
+      </div>
+      <div class="p-5">
+        <p class="font-bold">Aplikasi Mobile (Android & iOS)</p>
+        <p class="text-sm muted mt-1 leading-relaxed">Aplikasi mobile untuk kebutuhan bisnis dengan fitur lengkap.</p>
+        <span class="inline-block mt-3 text-xs font-semibold px-3 py-1 rounded-full mr-1.5" style="background:var(--bg-tint); color:var(--blue-600)">Mobile App</span>
+        <span class="inline-block mt-3 text-xs font-semibold px-3 py-1 rounded-full" style="background:var(--bg-tint); color:var(--blue-600)">Android & iOS</span>
+      </div>
+    </div>
+    <a href="https://kema3jaga4.mooo.com/" target="_blank" rel="noopener" class="card overflow-hidden block hover:border-blue-300 transition-colors">
+      <div class="h-40 flex items-center justify-center" style="background:var(--bg-tint)">
+        <svg width="70" height="50" viewBox="0 0 70 50" fill="none"><rect x="2" y="2" width="66" height="40" rx="4" stroke="#2563eb" stroke-width="2"/><rect x="8" y="10" width="14" height="24" rx="2" fill="#c7d7fb"/><rect x="26" y="10" width="34" height="10" rx="2" fill="#2563eb"/><rect x="26" y="24" width="34" height="10" rx="2" fill="#c7d7fb"/></svg>
+      </div>
+      <div class="p-5">
+        <p class="font-bold">Dashboard Desa Kema 3</p>
+        <p class="text-sm muted mt-1 leading-relaxed">Visualisasi data kependudukan warga (jumlah penduduk, keluarga, demografi) untuk wilayah Jaga 4.</p>
+        <span class="inline-block mt-3 text-xs font-semibold px-3 py-1 rounded-full" style="background:var(--bg-tint); color:var(--blue-600)">Dashboard</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pb-20">
+  <div class="rounded-3xl p-10 sm:p-14 grid lg:grid-cols-2 gap-10 items-center" style="background:var(--bg-tint)">
+    <div>
+      <span class="inline-block text-xs font-semibold px-3 py-1.5 rounded-full mb-4 bg-white" style="color:var(--blue-600)">Siap Memulai?</span>
+      <h2 class="text-3xl font-extrabold tracking-tight leading-snug">Diskusikan Proyek <span class="blue">Anda Bersama Kami</span></h2>
+      <p class="mt-4 muted text-sm leading-relaxed max-w-md">Kami siap membantu mewujudkan ide digital Anda. Hubungi kami sekarang untuk konsultasi gratis dan penawaran terbaik.</p>
+      <div class="flex flex-wrap gap-3 mt-7">
+        <a href="https://wa.me/6282395921952" target="_blank" rel="noopener" class="btn-primary inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.5 3.5A10.5 10.5 0 003.8 16.4L2.5 21.5l5.2-1.4A10.5 10.5 0 0020.5 3.5z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 8.7c0-.5.5-1.4 1-1.4h.7c.3 0 .6.2.7.5l.7 1.7c.1.3 0 .6-.2.8l-.6.6c.5 1 1.5 2 2.5 2.5l.6-.6c.2-.2.5-.3.8-.2l1.7.7c.3.1.5.4.5.7v.7c0 .5-.9 1-1.4 1-3.6 0-7-3.4-7-7z" fill="#fff"/></svg>
+          WhatsApp
+        </a>
+        <a href="mailto:mrizkisaria002@gmail.com" class="btn-outline bg-white inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="#0f1b33" stroke-width="1.6"/><path d="M3.5 6.5l8.5 6 8.5-6" stroke="#0f1b33" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+    <div class="hidden lg:flex justify-center">
+      <svg width="220" height="180" viewBox="0 0 220 180" fill="none">
+        <rect x="30" y="60" width="120" height="80" rx="10" fill="#fff" stroke="#dbe6fb" stroke-width="2"/>
+        <rect x="45" y="80" width="90" height="8" rx="4" fill="#c7d7fb"/>
+        <rect x="45" y="95" width="60" height="8" rx="4" fill="#e5edfd"/>
+        <circle cx="170" cy="90" r="34" fill="#dbe6fb"/>
+        <circle cx="170" cy="75" r="16" fill="#2563eb"/>
+        <rect x="150" y="95" width="40" height="45" rx="14" fill="#2563eb"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-slate-100 py-10">
+  <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <a href="#top" class="flex items-center gap-2 font-extrabold">
+      <span class="icon-tile" style="width:32px;height:32px;background:var(--blue-600);border-radius:9px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 3v18l6-4 6 4V3" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+      </span>
+      LamdaTech
+    </a>
+    <nav class="flex gap-6 text-sm muted">
+      <a href="#top" class="hover:text-slate-900">Home</a>
+      <a href="#services" class="hover:text-slate-900">Services</a>
+      <a href="#work" class="hover:text-slate-900">Portfolio</a>
+      <a href="#why" class="hover:text-slate-900">About</a>
+      <a href="#contact" class="hover:text-slate-900">Contact</a>
+    </nav>
+    <p class="text-xs muted">© 2026 LamdaTech. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
